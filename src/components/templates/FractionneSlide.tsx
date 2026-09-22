@@ -11,11 +11,11 @@ interface FractionneSlideProps {
 
 export default function FractionneSlide({ slide }: FractionneSlideProps) {
   const panels = slide.metadata?.panels || [
-    { title: 'Devanture', imageUrl: '/selection_photos_tv/01_facade_devanture_seven_b.jpg', tag: 'Accueil' },
-    { title: 'Réception', imageUrl: '/selection_photos_tv/02_reception_accueil_prestige.jpg', tag: 'Service 24h' },
-    { title: 'Salons', imageUrl: '/selection_photos_tv/salon_image005_hd.jpg', tag: 'Séjour' },
-    { title: 'Espace Dîner', imageUrl: '/selection_photos_tv/espace_diner_image011.jpg', tag: 'Repas' },
-    { title: 'Chambres', imageUrl: '/selection_photos_tv/chambre_lit_prestige.jpg', tag: 'Nuits' },
+    { title: 'Devanture', imageUrl: '/selection_photos_tv/01_facade_devanture_seven_b.webp', tag: 'Accueil' },
+    { title: 'Réception', imageUrl: '/selection_photos_tv/02_reception_accueil_prestige.webp', tag: 'Service 24h' },
+    { title: 'Salons', imageUrl: '/selection_photos_tv/salon_image005_hd.webp', tag: 'Séjour' },
+    { title: 'Espace Dîner', imageUrl: '/selection_photos_tv/espace_diner_image011.webp', tag: 'Repas' },
+    { title: 'Chambres', imageUrl: '/selection_photos_tv/chambre_lit_prestige.webp', tag: 'Nuits' },
   ];
 
   return (

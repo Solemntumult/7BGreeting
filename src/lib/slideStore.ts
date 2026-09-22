@@ -181,14 +181,20 @@ export function getAvailablePhotos(): AvailablePhoto[] {
 
   if (fs.existsSync(tvFolder)) {
     const files = fs.readdirSync(tvFolder);
+    const webpSet = new Set(files.filter(f => f.endsWith('.webp')).map(f => f.replace(/\.webp$/, '')));
     for (const f of files) {
       if (f.match(/\.(jpg|jpeg|png|webp)$/i)) {
+        const base = f.replace(/\.(jpg|jpeg|png|webp)$/i, '');
+        // If it's a jpg/jpeg but a webp counterpart exists, skip jpg to avoid duplicates
+        if ((f.endsWith('.jpg') || f.endsWith('.jpeg')) && webpSet.has(base)) {
+          continue;
+        }
         let label = f.replace(/^[0-9]+_/, '').replace(/\.(jpg|jpeg|png|webp)$/i, '').replace(/_/g, ' ');
         label = label.charAt(0).toUpperCase() + label.slice(1);
         list.push({
           filename: f,
           url: `/selection_photos_tv/${f}`,
-          category: 'Collection Officielle Seven B',
+          category: 'Collection Officielle Seven B (WebP Optimisé)',
           label
         });
       }

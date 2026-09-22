@@ -2,7 +2,7 @@
   {
     "id": "seq-00-mosaique-entree",
     "type": "fractionne",
-    "imageUrl": "/selection_photos_tv/01_facade_devanture_seven_b.jpg",
+    "imageUrl": "/selection_photos_tv/01_facade_devanture_seven_b.webp",
     "title": "Bienvenue à Seven B Guest House",
     "description": "L'excellence de l'hospitalité et du confort au cœur de Cotonou",
     "duration": 4000,
@@ -13,27 +13,27 @@
       "panels": [
         {
           "title": "Devanture",
-          "imageUrl": "/selection_photos_tv/01_facade_devanture_seven_b.jpg",
+          "imageUrl": "/selection_photos_tv/01_facade_devanture_seven_b.webp",
           "tag": "Accueil"
         },
         {
           "title": "Réception",
-          "imageUrl": "/selection_photos_tv/02_reception_accueil_prestige.jpg",
+          "imageUrl": "/selection_photos_tv/02_reception_accueil_prestige.webp",
           "tag": "Service 24h"
         },
         {
           "title": "Salons",
-          "imageUrl": "/selection_photos_tv/salon_image005_hd.jpg",
+          "imageUrl": "/selection_photos_tv/salon_image005_hd.webp",
           "tag": "Séjour"
         },
         {
           "title": "Espace Dîner",
-          "imageUrl": "/selection_photos_tv/espace_diner_image011.jpg",
+          "imageUrl": "/selection_photos_tv/espace_diner_image011.webp",
           "tag": "Repas"
         },
         {
           "title": "Chambres",
-          "imageUrl": "/selection_photos_tv/chambre_lit_prestige.jpg",
+          "imageUrl": "/selection_photos_tv/chambre_lit_prestige.webp",
           "tag": "Nuits"
         }
       ]
@@ -42,7 +42,7 @@
   {
     "id": "seq-01-devanture",
     "type": "announcement",
-    "imageUrl": "/selection_photos_tv/01_facade_devanture_seven_b.jpg",
+    "imageUrl": "/selection_photos_tv/01_facade_devanture_seven_b.webp",
     "title": "Notre Cadre & Devanture d'Honneur",
     "description": "Une entrée chaleureuse avec perron et service d'accueil disponible 24h/24, 7j/7",
     "duration": 4000,
@@ -53,7 +53,7 @@
   {
     "id": "seq-02-salons",
     "type": "announcement",
-    "imageUrl": "/selection_photos_tv/salon_image005_hd.jpg",
+    "imageUrl": "/selection_photos_tv/salon_image005_hd.webp",
     "title": "Salons Contemporains & Espaces de Vie",
     "description": "Design moderne, confort raffiné et connectivité pour vos moments de détente",
     "duration": 4000,
@@ -64,7 +64,7 @@
   {
     "id": "seq-03-diner",
     "type": "announcement",
-    "imageUrl": "/selection_photos_tv/espace_diner_image011.jpg",
+    "imageUrl": "/selection_photos_tv/espace_diner_image011.webp",
     "title": "Espaces Dîner & Convivialité",
     "description": "Partagez des repas chaleureux dans l'intimité de votre appartement",
     "duration": 4000,
@@ -75,7 +75,7 @@
   {
     "id": "seq-04-chambres",
     "type": "announcement",
-    "imageUrl": "/selection_photos_tv/chambre_lit_prestige.jpg",
+    "imageUrl": "/selection_photos_tv/chambre_lit_prestige.webp",
     "title": "Suites & Chambres Prestige",
     "description": "Literie grand confort et ambiance raffinée pour des nuits paisibles et sereines",
     "duration": 4000,
@@ -86,7 +86,7 @@
   {
     "id": "seq-05-jacuzzi",
     "type": "announcement",
-    "imageUrl": "/selection_photos_tv/08_espace_balneo_jacuzzi_privatif.jpg",
+    "imageUrl": "/selection_photos_tv/08_espace_balneo_jacuzzi_privatif.webp",
     "title": "Salle de bain avec Jacuzzi",
     "description": "Offrez-vous un instant de bien-être et de relaxation absolue",
     "duration": 4000,
@@ -97,7 +97,7 @@
   {
     "id": "seq-06-evenements-1",
     "type": "announcement",
-    "imageUrl": "/selection_photos_tv/evenement_reception_01.jpg",
+    "imageUrl": "/selection_photos_tv/evenement_reception_01.webp",
     "title": "Vos Événements & Réceptions à Seven B",
     "description": "Séminaires, cocktails d'entreprises, anniversaires et rencontres professionnelles",
     "duration": 4000,
@@ -108,7 +108,7 @@
   {
     "id": "seq-07-evenements-2",
     "type": "announcement",
-    "imageUrl": "/selection_photos_tv/evenement_reception_02.jpg",
+    "imageUrl": "/selection_photos_tv/evenement_reception_02.webp",
     "title": "Organisation Clé en Main & Service Traiteur",
     "description": "Une équipe dédiée pour faire de chacune de vos célébrations une réussite inoubliable",
     "duration": 4000,
