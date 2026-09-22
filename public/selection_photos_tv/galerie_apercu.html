@@ -53,11 +53,11 @@
         .rotating-logo { width: 100%; height: 100%; animation: spinLogo 22s linear infinite; }
         @keyframes spinLogo { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        /* Pure White Typography, NO BOX */
-        .tv-overlay { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 80px; }
-        .tv-overlay-cat { color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
-        .tv-overlay-title { font-size: 3.5rem; font-weight: 900; color: #FFFFFF; text-shadow: 0 4px 25px rgba(0,0,0,0.95); margin-bottom: 20px; line-height: 1.15; max-width: 1100px; }
-        .tv-overlay-desc { font-size: 1.6rem; color: rgba(255,255,255,0.95); font-weight: 300; text-shadow: 0 2px 12px rgba(0,0,0,0.9); max-width: 950px; line-height: 1.5; }
+        /* Pure White Typography, refined size and bottom positioned so photo is clearly visible */
+        .tv-overlay { position: absolute; inset-x: 0; bottom: 0; height: 50%; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; padding: 20px 60px 75px; }
+        .tv-overlay-cat { color: rgba(255,255,255,0.8); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 8px; text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
+        .tv-overlay-title { font-size: 2.2rem; font-weight: 800; color: #FFFFFF; text-shadow: 0 4px 20px rgba(0,0,0,0.95); margin-bottom: 10px; line-height: 1.2; max-width: 900px; }
+        .tv-overlay-desc { font-size: 1.15rem; color: rgba(255,255,255,0.95); font-weight: 300; text-shadow: 0 2px 10px rgba(0,0,0,0.9); max-width: 750px; line-height: 1.4; }
         
         /* Pin Pulse for Carte in Modal */
         .map-pin-wrap { display: none; position: absolute; left: 47.74%; top: 61.87%; transform: translate(-50%, -100%); z-index: 10; pointer-events: none; }
@@ -339,7 +339,7 @@
 
         function startTimer() {
             if (slideTimer) clearInterval(slideTimer);
-            slideTimer = setInterval(nextSlide, 4000);
+            slideTimer = setInterval(nextSlide, 7000);
         }
 
         function resetTimer() {

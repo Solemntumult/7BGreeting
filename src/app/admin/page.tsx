@@ -44,7 +44,7 @@ export default function AdminPage() {
   const [formImageUrl, setFormImageUrl] = useState('');
   const [formTitle, setFormTitle] = useState('');
   const [formDescription, setFormDescription] = useState('');
-  const [formDuration, setFormDuration] = useState(4000);
+  const [formDuration, setFormDuration] = useState(7000);
   const [formCategory, setFormCategory] = useState('Annonce');
   
   // Upload status

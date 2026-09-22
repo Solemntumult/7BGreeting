@@ -49,30 +49,30 @@ export default function MapSlide({ slide }: MapSlideProps) {
       <div className="relative z-20 w-full pt-12 sm:pt-16 text-center flex flex-col items-center pointer-events-none px-6">
         {/* Eyebrow */}
         <motion.div
-          initial={{ opacity: 0, y: -20, letterSpacing: '0.4em' }}
-          animate={{ opacity: 0.9, y: 0, letterSpacing: '0.3em' }}
+          initial={{ opacity: 0, y: -15, letterSpacing: '0.35em' }}
+          animate={{ opacity: 0.85, y: 0, letterSpacing: '0.25em' }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-xs sm:text-sm font-bold text-white uppercase tracking-[0.3em] mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+          className="text-[11px] sm:text-xs md:text-sm font-semibold text-white/80 uppercase tracking-[0.25em] mb-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
         >
-          SEVEN B HÔTEL • LOCALISATION
+          SEVEN B GUEST HOUSE • LOCALISATION
         </motion.div>
 
         {/* Main Title Requested: "Où sommes-nous" */}
         <motion.h1
-          initial={{ opacity: 0, y: 25, scale: 0.96 }}
+          initial={{ opacity: 0, y: 20, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: 0.35, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)] leading-tight"
+          transition={{ delay: 0.35, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)] leading-tight"
         >
           {slide.title || 'Où sommes-nous ?'}
         </motion.h1>
 
         {/* Subtitle Address */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.55, duration: 0.8 }}
-          className="text-lg sm:text-2xl md:text-3xl text-white/95 font-light max-w-4xl mt-3 drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)] tracking-wide"
+          transition={{ delay: 0.5, duration: 0.75 }}
+          className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 font-light max-w-2xl mt-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] tracking-wide"
         >
           {slide.description || 'Maison Claude LISSANON, Rue 12578, Akogbato — Cotonou, Bénin'}
         </motion.p>

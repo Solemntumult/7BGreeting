@@ -84,30 +84,30 @@ export default function FractionneSlide({ slide }: FractionneSlideProps) {
         <div className="relative z-20 flex flex-col items-center max-w-5xl">
           {/* Eyebrow Label */}
           <motion.div
-            initial={{ opacity: 0, letterSpacing: '0.5em', y: -20 }}
-            animate={{ opacity: 1, letterSpacing: '0.35em', y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xs md:text-sm text-white/80 font-bold uppercase tracking-[0.35em] mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
+            initial={{ opacity: 0, letterSpacing: '0.4em', y: -15 }}
+            animate={{ opacity: 0.9, letterSpacing: '0.25em', y: 0 }}
+            transition={{ delay: 0.35, duration: 0.7 }}
+            className="text-[11px] sm:text-xs md:text-sm text-white/80 font-semibold uppercase tracking-[0.25em] mb-2.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
           >
             L'EXPÉRIENCE SEVEN B GUEST HOUSE
           </motion.div>
 
           {/* Main Title */}
           <motion.h1
-            initial={{ opacity: 0, scale: 0.92, y: 20 }}
+            initial={{ opacity: 0, scale: 0.94, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.9 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] leading-tight"
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)] leading-tight max-w-4xl"
           >
             {slide.title || 'Seven B Guest House'}
           </motion.h1>
 
           {/* Description line */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.85, duration: 0.9 }}
-            className="text-lg sm:text-2xl md:text-3xl text-white/95 font-light max-w-4xl mt-5 tracking-wide drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)] leading-relaxed"
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 font-light max-w-3xl mt-3 tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] leading-relaxed"
           >
             {slide.description || 'Chaque espace a été conçu pour sublimer votre séjour'}
           </motion.p>
