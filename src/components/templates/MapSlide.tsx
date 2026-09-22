@@ -154,15 +154,15 @@ export default function MapSlide({ slide }: MapSlideProps) {
         </motion.div>
       </div>
 
-      {/* Bottom Footer Info — Pure White, No Box */}
-      <div className="relative z-20 w-full pb-8 sm:pb-12 text-center pointer-events-none">
+      {/* Bottom Footer Info — Pure White Address Indication */}
+      <div className="relative z-20 w-full pb-8 sm:pb-12 text-center pointer-events-none px-6">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 0.85, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.7 }}
-          className="text-xs sm:text-sm tracking-widest text-white/80 uppercase font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.7 }}
+          className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)] max-w-4xl mx-auto tracking-wide"
         >
-          À 5 minutes de l'Aéroport International & des Plages de Fidjrossè
+          A Fidjrossè-Akogbato, Rue 12578, sur la route pavée non loin du marché local
         </motion.p>
       </div>
     </motion.div>

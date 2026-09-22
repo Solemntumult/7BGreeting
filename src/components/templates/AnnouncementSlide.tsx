@@ -9,57 +9,6 @@ interface AnnouncementSlideProps {
 }
 
 export default function AnnouncementSlide({ slide }: AnnouncementSlideProps) {
-  const isTextOnlyBlackSlide =
-    slide.id.includes('adresse') ||
-    slide.imageUrl.includes('fond_noir') ||
-    !slide.imageUrl;
-
-  if (isTextOnlyBlackSlide) {
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1.4, ease: 'easeInOut' }}
-        className="relative w-full h-full flex flex-col items-center justify-center bg-black select-none px-8 sm:px-16"
-      >
-        <div className="relative z-10 w-full max-w-5xl mx-auto text-center flex flex-col items-center pointer-events-none">
-          {slide.category && (
-            <motion.div
-              initial={{ opacity: 0, y: 15, letterSpacing: '0.35em' }}
-              animate={{ opacity: 0.85, y: 0, letterSpacing: '0.25em' }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-xs sm:text-sm md:text-base font-semibold text-white/75 uppercase tracking-[0.25em] mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-            >
-              SEVEN B • {slide.category}
-            </motion.div>
-          )}
-
-          {slide.title && (
-            <motion.h1
-              initial={{ opacity: 0, y: 20, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ delay: 0.35, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-relaxed max-w-4xl drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]"
-            >
-              {slide.title}
-            </motion.h1>
-          )}
-
-          {slide.description && (
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.75 }}
-              className="mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-light max-w-3xl leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
-            >
-              {slide.description}
-            </motion.p>
-          )}
-        </div>
-      </motion.div>
-    );
-  }
 
   return (
     <motion.div

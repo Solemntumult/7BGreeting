@@ -349,6 +349,13 @@ async function exportMapSlide({ index, outputName }) {
       <rect x="0" y="0" width="220" height="42" rx="8" fill="#0b0f17" fill-opacity="0.92" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1" />
       <text x="110" y="26" text-anchor="middle" fill="#ffffff" font-size="14" font-family="'Segoe UI', sans-serif" font-weight="700" letter-spacing="1">SEVEN B GUEST HOUSE</text>
     </g>
+
+    <!-- BOTTOM TEXT: Indication exacte demandée -->
+    <text x="960" y="1030" text-anchor="middle"
+          fill="#ffffff" font-size="22" font-family="'Segoe UI', -apple-system, Roboto, sans-serif"
+          font-weight="600" letter-spacing="0.3" filter="url(#dropShadow)">
+      A Fidjrossè-Akogbato, Rue 12578, sur la route pavée non loin du marché local
+    </text>
   </svg>
   `;
 
@@ -372,70 +379,7 @@ async function exportMapSlide({ index, outputName }) {
   console.log(`✔ Generated: ${outputName}.jpg & .webp`);
 }
 
-// 4. Export Black Text Slide (pure black background, centered white text, top-right logo)
-async function exportBlackTextSlide({ index, outputName }) {
-  console.log(`Rendering [${index}] ${outputName} (Page Noire Texte Blanc)...`);
-
-  const logoBuf = await getLogoBuffer(84);
-
-  // Centered crisp white typography
-  const overlaySvg = `
-  <svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="whiteGlow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.95" />
-      </filter>
-    </defs>
-
-    <!-- Centered Address Text split over 2 elegant lines -->
-    <text x="960" y="520" text-anchor="middle"
-          fill="#ffffff" font-size="48" font-family="'Segoe UI', -apple-system, Roboto, sans-serif"
-          font-weight="700" letter-spacing="-0.3" filter="url(#whiteGlow)">
-      A Fidjrossè-Akogbato, Rue 12578,
-    </text>
-    <text x="960" y="590" text-anchor="middle"
-          fill="#ffffff" font-size="48" font-family="'Segoe UI', -apple-system, Roboto, sans-serif"
-          font-weight="700" letter-spacing="-0.3" filter="url(#whiteGlow)">
-      sur la route pavée non loin du marché local
-    </text>
-  </svg>
-  `;
-
-  const compositeImages = [
-    { input: Buffer.from(overlaySvg), top: 0, left: 0 },
-    { input: logoBuf, top: 35, left: 1795 }
-  ];
-
-  // Save JPEG
-  await sharp({
-    create: {
-      width: 1920,
-      height: 1080,
-      channels: 4,
-      background: { r: 0, g: 0, b: 0, alpha: 1 }
-    }
-  })
-    .composite(compositeImages)
-    .jpeg({ quality: 94 })
-    .toFile(path.join(OUTPUT_DIR, `${outputName}.jpg`));
-
-  // Save WebP
-  await sharp({
-    create: {
-      width: 1920,
-      height: 1080,
-      channels: 4,
-      background: { r: 0, g: 0, b: 0, alpha: 1 }
-    }
-  })
-    .composite(compositeImages)
-    .webp({ quality: 90 })
-    .toFile(path.join(OUTPUT_DIR, `${outputName}.webp`));
-
-  console.log(`✔ Generated: ${outputName}.jpg & .webp`);
-}
-
-// 5. Generate HTML viewer inside the folder
+// 4. Generate HTML viewer inside the folder
 function generateFolderHtmlViewer(slidesList) {
   const htmlContent = `<!DOCTYPE html>
 <html lang="fr">
@@ -582,15 +526,6 @@ async function main() {
       title: 'Où sommes-nous ?',
       category: 'Localisation',
       desc: 'Maison Claude LISSANON, Rue 12578, Akogbato — Cotonou, Bénin'
-    },
-    // 10. Indication d'adresse finale (Page noire texte blanc)
-    {
-      type: 'black',
-      index: 10,
-      outputName: '10_indication_adresse',
-      title: 'A Fidjrossè-Akogbato, Rue 12578, sur la route pavée non loin du marché local',
-      category: 'Adresse',
-      desc: 'A Fidjrossè-Akogbato, Rue 12578, sur la route pavée non loin du marché local'
     }
   ];
 
@@ -603,9 +538,6 @@ async function main() {
     } else if (item.type === 'map') {
       await exportMapSlide({ index: item.index, outputName: item.outputName });
       exportedMeta.push({ file: item.outputName, title: item.title, category: item.category, desc: item.desc });
-    } else if (item.type === 'black') {
-      await exportBlackTextSlide({ index: item.index, outputName: item.outputName });
-      exportedMeta.push({ file: item.outputName, title: item.title, category: item.category, desc: item.desc });
     } else {
       await exportStandardSlide(item);
       exportedMeta.push({ file: item.outputName, title: item.title, category: item.category, desc: item.description });
@@ -614,7 +546,7 @@ async function main() {
 
   generateFolderHtmlViewer(exportedMeta);
 
-  console.log('\n--- ALL 10 TV IMAGES WITH EMBEDDED TEXTS SUCCESSFULLY EXPORTED! ---');
+  console.log('\n--- ALL 9 TV IMAGES WITH EMBEDDED TEXTS SUCCESSFULLY EXPORTED! ---');
   console.log(`Folder path: ${OUTPUT_DIR}`);
 }
 
