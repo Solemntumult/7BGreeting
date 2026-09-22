@@ -350,10 +350,10 @@ async function exportMapSlide({ index, outputName }) {
       <text x="110" y="26" text-anchor="middle" fill="#ffffff" font-size="14" font-family="'Segoe UI', sans-serif" font-weight="700" letter-spacing="1">SEVEN B GUEST HOUSE</text>
     </g>
 
-    <!-- BOTTOM TEXT: Indication exacte demandée -->
-    <text x="960" y="1030" text-anchor="middle"
-          fill="#ffffff" font-size="22" font-family="'Segoe UI', -apple-system, Roboto, sans-serif"
-          font-weight="600" letter-spacing="0.3" filter="url(#dropShadow)">
+    <!-- BOTTOM TEXT: Indication exacte agrandie sans gras -->
+    <text x="960" y="1015" text-anchor="middle"
+          fill="#ffffff" font-size="38" font-family="'Segoe UI', -apple-system, Roboto, sans-serif"
+          font-weight="400" letter-spacing="0.3" filter="url(#dropShadow)">
       A Fidjrossè-Akogbato, Rue 12578, sur la route pavée non loin du marché local
     </text>
   </svg>

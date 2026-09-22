@@ -160,7 +160,7 @@ export default function MapSlide({ slide }: MapSlideProps) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.7 }}
-          className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)] max-w-4xl mx-auto tracking-wide"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)] max-w-6xl mx-auto tracking-normal leading-snug"
         >
           A Fidjrossè-Akogbato, Rue 12578, sur la route pavée non loin du marché local
         </motion.p>
