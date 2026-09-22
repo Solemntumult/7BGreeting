@@ -41,12 +41,12 @@ export default function Slideshow({ initialSlides = [] }: SlideshowProps) {
     return () => clearInterval(interval);
   }, []);
 
-  // Slide cycle timer (7s default per slide)
+  // Slide cycle timer (6s default per slide)
   useEffect(() => {
     if (slides.length === 0) return;
 
     const currentSlide = slides[currentIndex % slides.length];
-    const duration = currentSlide?.duration || 7000;
+    const duration = currentSlide?.duration || 6000;
 
     const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);

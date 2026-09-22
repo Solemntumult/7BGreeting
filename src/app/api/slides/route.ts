@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       imageUrl,
       title: title || '',
       description: description || '',
-      duration: Number(duration) || 7000,
+      duration: Number(duration) || 6000,
       category: category || 'Annonce',
       active: true,
       order: current.length + 1,
