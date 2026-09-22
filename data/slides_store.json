@@ -126,5 +126,14 @@
     "category": "Localisation",
     "active": true,
     "order": 9
+  },
+  {
+    "id": "seq-09-adresse",
+    "type": "announcement",
+    "imageUrl": "/selection_photos_tv/fond_noir.webp",
+    "title": "A Fidjrossè-Akogbato, Rue 12578, sur la route pavée non loin du marché local",
+    "duration": 6000,
+    "active": true,
+    "order": 10
   }
 ]
