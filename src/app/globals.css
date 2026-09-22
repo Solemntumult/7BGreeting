@@ -16,7 +16,5 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* No scrolling for TV display */
-  width: 100vw;
-  height: 100vh;
+  overflow-x: hidden;
 }

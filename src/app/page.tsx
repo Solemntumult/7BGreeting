@@ -1,10 +1,10 @@
 import Slideshow from '@/components/Slideshow';
-import { slides } from '@/data/slides';
+import { OFFICIAL_SEQUENCE } from '@/data/curatedSequence';
 
 export default function Home() {
   return (
     <main className="w-screen h-screen overflow-hidden bg-black text-white">
-      <Slideshow slides={slides} />
+      <Slideshow initialSlides={OFFICIAL_SEQUENCE} />
     </main>
   );
 }

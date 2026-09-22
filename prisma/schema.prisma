@@ -1,0 +1,41 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum SlideType {
+  photo
+  announcement
+  fractionne
+  map
+}
+
+model Slide {
+  id          String    @id @default(cuid())
+  type        SlideType @default(announcement)
+  imageUrl    String
+  title       String?
+  description String?
+  duration    Int       @default(5000)
+  category    String?
+  active      Boolean   @default(true)
+  order       Int       @default(0)
+  metadata    String?   // JSON configuration for multi-panel images or animations
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([active])
+  @@index([order])
+}
+
+model SignageSetting {
+  id             String   @id @default("default")
+  hotelName      String   @default("Seven B Hôtel")
+  tickerText     String?  // Optional news / alert ticker
+  defaultDuration Int     @default(5000)
+  updatedAt      DateTime @updatedAt
+}
